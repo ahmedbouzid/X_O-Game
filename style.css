@@ -1,0 +1,62 @@
+*{
+   padding:0 ;
+   margin: 0;
+   box-sizing: border-box; 
+}
+:root {
+    --winning : #2d414b;
+}
+body {
+    color: crimson;
+    font-family: 'Finger Paint' , cursive;
+}
+h1{
+    color: aquamarine;
+    text-transform: uppercase;
+}
+
+.container{
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+} 
+#gameBoard{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(44, 177, 44) ;
+    font-size: 120px;
+    border-right: 4px solid;
+    border-bottom: 4px solid ;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: crimson;
+    font-size: 20px;
+    color: wheat;
+    transition: 200ms transform;
+    font-weight: 600;
+}
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(6n) ~ .box {
+    border-bottom: none;
+}
